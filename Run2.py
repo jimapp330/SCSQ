@@ -52,14 +52,14 @@ def add_noise2(xx, yy, ratio):
 for tt in range(3):
 
     print(f'--------------{tt}--------------------inter----')
-    for DATASET in ['ETDataset','traffic', 'powerLoad', 'ETDataset']:  # dataset name  traffic  powerLoad ETDataset
+    for DATASET in ['ETDataset','traffic', 'powerLoad']:  # dataset name  traffic  powerLoad ETDataset
 
         Mode = 'Train'  # Train or test
         DEBUG = 'True'
 
         DEVICE = 'cuda:0'
         MODEL = 'Attn_LSTM'
-        ktype = 'sgd-influence'  # sgd-influence, d-shapely, cl
+        ktype = 'd-shapely'  # sgd-influence, d-shapely, cl
         noise_ratio = 0  # 0 0.3
 
 

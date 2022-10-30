@@ -64,15 +64,15 @@ today = time.time()
 
 for tt in range(3):
     print(f'--------------{tt}--------------------inter----')
-    for DATASET in ['powerLoad', 'traffic', 'ETDataset']:  # dataset name  traffic  powerLoad ETDataset
+    for DATASET in ['traffic', 'powerLoad', 'ETDataset']:  # dataset name  traffic  powerLoad ETDataset
 
         Mode = 'Train'  # Train or test
         DEBUG = 'True'
         optim = 'sgd'
         DEVICE = 'cuda:0'
-        MODEL = 'mLSTM' #Attn_LSTM   gbrt  DecoderTransformer informer  mLSTM
+        MODEL = 'Attn_LSTM' #Attn_LSTM gbrt  DecoderTransformer informer  mLSTM
         noise_ratio = 0  # 0 0.3
-        ktype = 'normal' #sadc, normal, cagrad, pcgrad
+        ktype = 'pcgrad' #sadc, normal, cagrad, pcgrad
         finish_time = 1632304248.5494814
         # 获取配置文件
         config_file = 'configs/{}.conf'.format(DATASET)
